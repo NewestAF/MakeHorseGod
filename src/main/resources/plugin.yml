@@ -1,0 +1,4 @@
+name: MakeHorseGod
+version: '${version}'
+main: com.newestaf.makehorsegod.MakeHorseGod
+api-version: 1.18
