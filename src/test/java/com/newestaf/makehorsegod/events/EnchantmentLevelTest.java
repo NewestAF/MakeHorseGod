@@ -1,14 +1,11 @@
 package com.newestaf.makehorsegod.events;
 
-import com.newestaf.makehorsegod.enchant.EnchantLevel;
+import com.newestaf.makehorsegod.enchant.EnchantmentLevel;
 import org.junit.Test;
 
-import java.util.concurrent.ThreadLocalRandom;
-
-import static java.lang.Math.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class EnchantLevelTest {
+public class EnchantmentLevelTest {
     @Test
     public void testGetBaseEnchantLevel() {
         //given
@@ -22,7 +19,7 @@ public class EnchantLevelTest {
 
         //when
         for (int i = 0; i < 1000; i++) {
-            double level = EnchantLevel.getBaseEnchantLevel(book, slot);
+            double level = EnchantmentLevel.getBaseEnchantLevel(book, slot);
             if (!(level >= min && level <=max)) {
                 failed++;
             }
