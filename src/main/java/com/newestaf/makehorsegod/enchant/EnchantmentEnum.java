@@ -4,12 +4,17 @@ import org.bukkit.enchantments.Enchantment;
 
 public enum EnchantmentEnum {
 
-    PROTECTION (Enchantment.PROTECTION_ENVIRONMENTAL, 1, 21, 17, 37, 33, 53, 49, 69, -1, -1, 10),
-    FIRE_PROTECTION (Enchantment.PROTECTION_FIRE,10, 22, 18, 30, 26, 38, 34, 46, -1, -1, 5),
-    EXPLOSIONS_PROTECTION (Enchantment.PROTECTION_EXPLOSIONS, 5, 17, 13, 25, 21, 33, 29, 41, -1, -1, 2),
-    PROJECTILE_PROTECTION (Enchantment.PROTECTION_PROJECTILE, 3, 18, 9, 24, 15, 30, 21, 36, -1, -1,  5);
+    PROTECTION (1, 21, 17, 37, 33, 53, 49, 69, -1, -1, 10),
+    FIRE_PROTECTION (10, 22, 18, 30, 26, 38, 34, 46, -1, -1, 5),
+    EXPLOSIONS_PROTECTION (5, 17, 13, 25, 21, 33, 29, 41, -1, -1, 2),
+    PROJECTILE_PROTECTION (3, 18, 9, 24, 15, 30, 21, 36, -1, -1,  5);
 
-    private final Enchantment enchantment;
+//    PROTECTION (Enchantment.PROTECTION_ENVIRONMENTAL, 1, 21, 17, 37, 33, 53, 49, 69, -1, -1, 10),
+//    FIRE_PROTECTION (Enchantment.PROTECTION_FIRE,10, 22, 18, 30, 26, 38, 34, 46, -1, -1, 5),
+//    EXPLOSIONS_PROTECTION (Enchantment.PROTECTION_EXPLOSIONS, 5, 17, 13, 25, 21, 33, 29, 41, -1, -1, 2),
+//    PROJECTILE_PROTECTION (Enchantment.PROTECTION_PROJECTILE, 3, 18, 9, 24, 15, 30, 21, 36, -1, -1,  5);
+
+//    private final Enchantment enchantment;
     private final int minLevelI;
     private final int maxLevelI;
     private final int minLevelII;
@@ -22,11 +27,28 @@ public enum EnchantmentEnum {
     private final int maxLevelV;
     private final int weight;
 
-    EnchantmentEnum(Enchantment enchantment, int minLevelI, int maxLevelI,
+//    EnchantmentEnum(Enchantment enchantment, int minLevelI, int maxLevelI,
+//                    int minLevelII, int maxLevelII, int minLevelIII, int maxLevelIII,
+//                    int minLevelIV, int maxLevelIV, int minLevelV, int maxLevelV,
+//                    int weight) {
+//        this.enchantment = enchantment;
+//        this.minLevelI = minLevelI;
+//        this.maxLevelI = maxLevelI;
+//        this.minLevelII = minLevelII;
+//        this.maxLevelII = maxLevelII;
+//        this.minLevelIII = minLevelIII;
+//        this.maxLevelIII = maxLevelIII;
+//        this.minLevelIV = minLevelIV;
+//        this.maxLevelIV = maxLevelIV;
+//        this.minLevelV = minLevelV;
+//        this.maxLevelV = maxLevelV;
+//        this.weight = weight;
+//    }
+
+    EnchantmentEnum(int minLevelI, int maxLevelI,
                     int minLevelII, int maxLevelII, int minLevelIII, int maxLevelIII,
                     int minLevelIV, int maxLevelIV, int minLevelV, int maxLevelV,
                     int weight) {
-        this.enchantment = enchantment;
         this.minLevelI = minLevelI;
         this.maxLevelI = maxLevelI;
         this.minLevelII = minLevelII;
@@ -40,14 +62,14 @@ public enum EnchantmentEnum {
         this.weight = weight;
     }
 
-    @Override
-    public String toString() {
-        return this.enchantment.getKey().getKey();
-    }
+//    @Override
+//    public String toString() {
+//        return this.enchantment.getKey().getKey();
+//    }
 
-    public String getName() {
-        return this.enchantment.getKey().getKey();
-    }
+//    public String getName() {
+//        return this.enchantment.getKey().getKey();
+//    }
 
     public int getMin(int power) {
         return switch (power) {
